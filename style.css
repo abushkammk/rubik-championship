@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #090b10;
+  color: #f4f5fb;
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 16px;
+}
+
+.registration-card {
+  width: 100%;
+  max-width: 440px;
+  background: #12151d;
+  border: 1px solid #282d3a;
+  border-radius: 18px;
+  padding: 35px;
+}
+
+.subtitle {
+  color: #927fff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #9299aa;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  background: #0c0f16;
+  border: 1px solid #282d3a;
+  border-radius: 9px;
+  color: #f4f5fb;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #725cff;
+}
+
+input::placeholder {
+  color: #626a7c;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #725cff;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #6049e8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#formMessage {
+  display: none;
+  margin-top: 18px;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#formMessage.success {
+  display: block;
+  color: #4ade80;
+  background: #10251b;
+  border: 1px solid #245a3a;
+}
+
+#formMessage.error {
+  display: block;
+  color: #ff7070;
+  background: #2a1518;
+  border: 1px solid #71343b;
+}
+
+#formMessage.loading {
+  display: block;
+  color: #b5aaff;
+  background: #1c1930;
+  border: 1px solid #39305e;
+}
+
+.form-note {
+  color: #737b8d;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 22px;
+}
+
+@media (max-width: 480px) {
+  .registration-card {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}

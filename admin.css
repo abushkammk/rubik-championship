@@ -1,0 +1,205 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #090b10;
+  color: #f4f5fb;
+  min-height: 100vh;
+}
+
+.admin-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.brand {
+  color: #927fff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.login-card,
+.stats-card {
+  background: #12151d;
+  border: 1px solid #282d3a;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.login-card {
+  max-width: 430px;
+}
+
+.login-card p {
+  color: #9299aa;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  background: #0c0f16;
+  border: 1px solid #282d3a;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+input:focus {
+  border-color: #725cff;
+}
+
+button {
+  padding: 13px 18px;
+  background: #725cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #6049e8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-card form button {
+  width: 100%;
+}
+
+.logout-button {
+  background: #292d3a;
+}
+
+.refresh-button {
+  background: #292d3a;
+}
+
+.stats-card {
+  margin-bottom: 30px;
+}
+
+.stats-card span {
+  display: block;
+  color: #9299aa;
+  margin-bottom: 12px;
+}
+
+.stats-card strong {
+  font-size: 36px;
+  color: #927fff;
+}
+
+.participants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  margin-bottom: 20px;
+}
+
+.participants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.participant-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: #12151d;
+  border: 1px solid #282d3a;
+  border-radius: 12px;
+}
+
+.participant-info h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.participant-info p {
+  color: #9299aa;
+  font-size: 13px;
+}
+
+.delete-button {
+  background: #9d303b;
+  flex-shrink: 0;
+}
+
+.delete-button:hover {
+  background: #c33c49;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 550px) {
+  .admin-container {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .participant-card {
+    align-items: flex-start;
+  }
+
+  .delete-button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

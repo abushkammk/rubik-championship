@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubik Championship — Регистрация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <section class="registration-card">
+
+      <p class="subtitle">RUBIK CHAMPIONSHIP</p>
+      <h1>Регистрация</h1>
+      <p class="description">
+        Заполни форму, чтобы принять участие в чемпионате.
+      </p>
+
+      <form id="registrationForm">
+
+        <div class="form-group">
+          <label for="firstName">Имя</label>
+          <input
+            type="text"
+            id="firstName"
+            placeholder="Введи имя"
+            minlength="2"
+            maxlength="50"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Фамилия</label>
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Введи фамилию"
+            minlength="2"
+            maxlength="50"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="schoolClass">Класс</label>
+          <input
+            type="text"
+            id="schoolClass"
+            placeholder="Например, 9-Б"
+            maxlength="20"
+            required
+          >
+        </div>
+
+        <button type="submit" id="submitButton">
+          Зарегистрироваться
+        </button>
+
+        <div id="formMessage" role="status" aria-live="polite"></div>
+
+      </form>
+
+      <p class="form-note">
+        Проверь правильность введённых данных.
+      </p>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

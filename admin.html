@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — Rubik Championship</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <main class="admin-container">
+
+    <header class="topbar">
+      <div>
+        <p class="brand">RUBIK CHAMPIONSHIP</p>
+        <h1>Admin Panel</h1>
+      </div>
+      <button id="logoutButton" class="logout-button hidden">
+        Выйти
+      </button>
+    </header>
+
+    <section id="loginSection" class="login-card">
+      <h2>Вход администратора</h2>
+      <p>Введи пароль для доступа к панели.</p>
+
+      <form id="loginForm">
+        <label for="adminPassword">Пароль</label>
+        <input
+          type="password"
+          id="adminPassword"
+          placeholder="Введи пароль"
+          required
+        >
+        <button type="submit">Войти</button>
+      </form>
+
+      <div id="loginMessage" class="message"></div>
+    </section>
+
+    <section id="dashboardSection" class="hidden">
+
+      <div class="stats-card">
+        <span>Всего участников</span>
+        <strong id="totalParticipants">0</strong>
+      </div>
+
+      <div class="participants-header">
+        <h2>Участники</h2>
+        <button id="refreshButton" class="refresh-button">
+          Обновить
+        </button>
+      </div>
+
+      <input
+        type="search"
+        id="searchInput"
+        class="search-input"
+        placeholder="Поиск по имени или фамилии..."
+      >
+
+      <div id="participantsList" class="participants-list"></div>
+
+      <div id="dashboardMessage" class="message"></div>
+
+    </section>
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
