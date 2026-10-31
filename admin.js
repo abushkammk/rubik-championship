@@ -1,4 +1,6 @@
 
+const API_URL = "https://rubik-championship.onrender.com";
+
 const loginForm = document.getElementById("loginForm");
 const loginSection = document.getElementById("loginSection");
 const dashboardSection = document.getElementById("dashboardSection");
@@ -8,7 +10,6 @@ const dashboardMessage = document.getElementById("dashboardMessage");
 
 const participantsList = document.getElementById("participantsList");
 const totalParticipants = document.getElementById("totalParticipants");
-
 const searchInput = document.getElementById("searchInput");
 const refreshButton = document.getElementById("refreshButton");
 const logoutButton = document.getElementById("logoutButton");
@@ -45,7 +46,7 @@ loginForm.addEventListener("submit", async (event) => {
   const password = document.getElementById("adminPassword").value;
 
   try {
-    const response = await fetch("http://localhost:3000/api/admin/login", {
+    const response = await fetch(`${API_URL}/api/admin/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -76,14 +77,11 @@ loginForm.addEventListener("submit", async (event) => {
 // Загрузка участников
 async function loadParticipants() {
   try {
-    const response = await fetch(
-      "http://localhost:3000/api/admin/participants",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
+    const response = await fetch(`${API_URL}/api/admin/participants`, {
+      headers: {
+        Authorization: `Bearer ${token}`
       }
-    );
+    });
 
     const data = await response.json();
 
@@ -179,7 +177,7 @@ async function deleteParticipant(id) {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/api/admin/participants/${id}`,
+      `${API_URL}/api/admin/participants/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -197,7 +195,9 @@ async function deleteParticipant(id) {
     }
 
     if (!response.ok) {
-      showDashboardMessage(data.message || "Не удалось удалить участника");
+      showDashboardMessage(
+        data.message || "Не удалось удалить участника"
+      );
       return;
     }
 
