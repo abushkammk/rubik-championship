@@ -21,7 +21,7 @@ form.addEventListener("submit", async (event) => {
   showMessage("Проверяем данные...", "loading");
 
   try {
-    const response = await fetch("http://localhost:3000/api/register", {
+    const response = await fetch("https://rubik-championship.onrender.com/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
